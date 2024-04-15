@@ -9,73 +9,75 @@ export default function Transaction() {
       <table className={styles.table}>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Status</th>
-            <th>Date</th>
-            <th>Amount</th>
+            <td>Name</td>
+            <td>Status</td>
+            <td>Date</td>
+            <td>Amount</td>
           </tr>
         </thead>
         <tbody>
-          <td>
-            <div className={styles.user}>
-              <Image
-                src="/noavatar.png"
-                alt=""
-                width={40}
-                height={40}
-                className={styles.userImage}
-              />
-              John Doe
-            </div>
-          </td>
-          <td>
-            <span className={`${styles.status} ${styles.pending}`}>
-            {/* <span className={`${styles.status} ${styles.pending}`}> */}
-              Pending
-            </span>
-          </td>
-          <td>14.01.2023</td>
-          <td>$3.200</td>
-        </tbody>
-        <tbody>
-          <td>
-            <div className={styles.user}>
-              <Image
-                src="/noavatar.png"
-                alt=""
-                width={40}
-                height={40}
-                className={styles.userImage}
-              />
-              John Doe
-            </div>
-          </td>
-          <td>
-            <span className={`${styles.status} ${styles.done}`}>Done</span>
-          </td>
-          <td>14.01.2023</td>
-          <td>$3.200</td>
-        </tbody>
-        <tbody>
-          <td>
-            <div className={styles.user}>
-              <Image
-                src="/noavatar.png"
-                alt=""
-                width={40}
-                height={40}
-                className={styles.userImage}
-              />
-              John Doe
-            </div>
-          </td>
-          <td>
-            <span className={`${styles.status} ${styles.cancelled}`}>
-              Cancelled
-            </span>
-          </td>
-          <td>14.01.2023</td>
-          <td>$3.200</td>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                John Doe
+              </div>
+            </td>
+            <td>
+              <span className={`${styles.status} ${styles.pending}`}>
+                {/* <span className={`${styles.status} ${styles.pending}`}> */}
+                Pending
+              </span>
+            </td>
+            <td>14.01.2023</td>
+            <td>$3.200</td>
+          </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                John Doe
+              </div>
+            </td>
+            <td>
+              <span className={`${styles.status} ${styles.done}`}>Done</span>
+            </td>
+            <td>14.01.2023</td>
+            <td>$3.200</td>
+          </tr>
+          <tr>
+            <td>
+              <div className={styles.user}>
+                <Image
+                  src="/noavatar.png"
+                  alt=""
+                  width={40}
+                  height={40}
+                  className={styles.userImage}
+                />
+                John Doe
+              </div>
+            </td>
+            <td>
+              <span className={`${styles.status} ${styles.cancelled}`}>
+                Cancelled
+              </span>
+            </td>
+            <td>14.01.2023</td>
+            <td>$3.200</td>
+          </tr>
         </tbody>
       </table>
     </div>
