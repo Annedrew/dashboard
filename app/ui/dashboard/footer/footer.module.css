@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    color: var(--textSoft);
+  }
+  
+  .contact {
+    display: flex;
+    font-weight: 200;
+    font-size: 12px;
+    gap: 5px;
+  }
+  
+  .text {
+    font-size: 12px;
+    font-weight: 200;
+  }

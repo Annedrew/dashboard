@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    color: var(--text) ;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.paginationbtn {
+    display: flex;
+    gap: 10px;
+}
