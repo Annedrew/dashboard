@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import styles from "@/app/ui/dashboard/users/users.module.css";
 import SearchBar from "@/app/ui/dashboard/searchbar/page";
@@ -43,7 +44,7 @@ export default function UserPage() {
             <td>Passive</td>
             <td>
               <div className={styles.buttons}>
-                <Link href="/">
+                <Link href={`users/test`}>
                   <button className={`${styles.buttons} ${styles.view}`}>
                     View
                   </button>
@@ -73,7 +74,7 @@ export default function UserPage() {
             <td>Active</td>
             <td>
               <div className={styles.buttons}>
-                <Link href="/">
+                <Link href={`users/test`}>
                   <button className={`${styles.buttons} ${styles.view}`}>
                     View
                   </button>
