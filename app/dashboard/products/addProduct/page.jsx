@@ -1,4 +1,4 @@
-import styles from "./add.module.css";
+import styles from "@/app/ui/dashboard/products/addProduct/add.module.css";
 
 export default function AddProduct() {
   return (
@@ -14,7 +14,7 @@ export default function AddProduct() {
             <input type="number" name="price" placeholder='price' />
             <input type="number" name="stock" placeholder='stock' />
             <textarea name="description" placeholder='description' rows="10" />
-            <button type="submit">Submit</button>
+            <button className={styles.button} type="submit">Submit</button>
         </form>
     </div>
   )

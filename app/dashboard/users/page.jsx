@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/app/ui/dashboard/user/user.module.css";
+import styles from "@/app/ui/dashboard/users/users.module.css";
 import SearchBar from "@/app/ui/dashboard/searchbar/page";
 import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/page";

@@ -1,7 +1,6 @@
 import SearchBar from "@/app/ui/dashboard/searchbar/page";
 import styles from "@/app/ui/dashboard/products/products.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/page";
 import Footer from "@/app/ui/dashboard/footer/page";
 
