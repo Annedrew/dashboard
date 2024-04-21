@@ -1,8 +1,11 @@
 import React from 'react'
 import styles from "@/app/ui/dashboard/users/userProfile/userProfile.module.css";
 import Image from 'next/image';
+import { fetchUser } from "@/app/lib/data";
 
-export default function UserProfile() {
+export default async function UserProfile() {
+    const users = await fetchUser();
+
     return (
         <div className={styles.container}>
           <div className={styles.infoContainer}>

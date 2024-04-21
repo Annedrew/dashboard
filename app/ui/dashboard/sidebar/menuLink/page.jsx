@@ -3,7 +3,7 @@ import Link from 'next/link'
 import styles from './menuLink.module.css'
 import { usePathname } from 'next/navigation'
 
-export default function MenuLink({ item }) {
+export default function MenuLink({ item, key }) {
   const pathname = usePathname()
   return (
     <Link

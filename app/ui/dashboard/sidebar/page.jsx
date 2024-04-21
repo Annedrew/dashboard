@@ -1,5 +1,5 @@
 import React from "react";
-import { sidebarItems } from "@/app/lib/data";
+import { sidebarItems } from "@/app/lib/constant";
 import MenuLink from "./menuLink/page";
 import styles from "./sidebar.module.css";
 import { MdLogout } from "react-icons/md";
@@ -25,7 +25,7 @@ export default function Sidebar() {
             <li key={item.title}>
               <span className={styles.cat}>{item.title}</span>
               {item.list.map((list) => {
-                return <MenuLink item={list} />;
+                return <MenuLink key={list.title} item={list} />;
               })}
             </li>
           );

@@ -1,4 +1,4 @@
-import SearchBar from "@/app/ui/dashboard/searchbar/page";
+import SearchBar from "@/app/dashboard/searchBar/page";
 import styles from "@/app/ui/dashboard/products/products.module.css";
 import Image from "next/image";
 import Pagination from "@/app/ui/dashboard/pagination/page";
