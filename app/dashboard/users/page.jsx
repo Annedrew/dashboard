@@ -4,11 +4,12 @@ import SearchBar from "@/app/dashboard/searchBar/page";
 import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/page";
 import Footer from "@/app/ui/dashboard/footer/page";
-import { fetchUser } from "@/app/lib/data";
+import { fetchUsers } from "@/app/lib/data";
 
 export default async function UserPage({searchParams}) {
   const q = searchParams?.q || "";
-  const users = await fetchUser(q);
+  const page = searchParams?.page || 1;
+  const {total_user, users} = await fetchUsers(q, page);
 
   return (
     <div className={styles.container}>
@@ -48,7 +49,7 @@ export default async function UserPage({searchParams}) {
               <td>{user.isActive ? "Active" : "Passive"}</td>
               <td>
                 <div className={styles.buttons}>
-                  <Link href={`users/test`}>
+                  <Link href={`users/${user.id}`}>
                     <button className={`${styles.buttons} ${styles.view}`}>
                       View
                     </button>
@@ -62,7 +63,7 @@ export default async function UserPage({searchParams}) {
           ))}
         </tbody>
       </table>
-      <Pagination />
+      <Pagination count={total_user}/>
       <Footer />
     </div>
   );

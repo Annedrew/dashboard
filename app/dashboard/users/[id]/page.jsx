@@ -3,30 +3,31 @@ import styles from "@/app/ui/dashboard/users/userProfile/userProfile.module.css"
 import Image from 'next/image';
 import { fetchUser } from "@/app/lib/data";
 
-export default async function UserProfile() {
-    const users = await fetchUser();
+export default async function UserProfile({params}) {
+    const { id } = params;
+    const user = await fetchUser(id);
 
     return (
         <div className={styles.container}>
           <div className={styles.infoContainer}>
             <div className={styles.imgContainer}>
-              <Image src="/noavatar.png" alt="" fill />
+              <Image src={user.img || "/noavatar.jpg"} alt="" fill />
             </div>
-            Janney
+            {user.username}
           </div>
           <div className={styles.formContainer}>
             <form className={styles.form}>
               <input type="hidden" name="id"/>
               <label>Username</label>
-              <input type="text" name="username" placeholder="username" />
+              <input type="text" name="username" placeholder={`${user.username}`} />
               <label>Email</label>
-              <input type="email" name="email" placeholder="email" />
+              <input type="email" name="email" placeholder={`${user.email}`} />
               <label>Password</label>
               <input type="password" name="password" />
               <label>Phone</label>
-              <input type="text" name="phone" placeholder="phone" />
+              <input type="text" name="phone" placeholder={`${user.phone}`} />
               <label>Address</label>
-              <textarea type="text" name="address" placeholder="address" />
+              <textarea type="text" name="address" placeholder={`${user.address}`} />
               <label>Is Admin?</label>
               <select name="isAdmin" id="isAdmin">
                 <option value={true}>Yes</option>

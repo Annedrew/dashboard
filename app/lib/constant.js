@@ -11,6 +11,7 @@ import {
     MdLogout,
   } from "react-icons/md";
 
+export const ITEM_PER_PAGE = 5;
 
 export const sidebarItems = [
   {

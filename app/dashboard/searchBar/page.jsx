@@ -10,6 +10,8 @@ export default function SearchBar({placeholder}) {
   const {replace} = useRouter();
   
   const handleSearch = useDebouncedCallback((e) => {
+    console.log(`searchParams: ${searchParams}`);
+
     const params = new URLSearchParams(searchParams);
     
     if (e.target.value) {
