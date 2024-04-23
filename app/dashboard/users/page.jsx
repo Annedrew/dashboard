@@ -5,6 +5,7 @@ import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/page";
 import Footer from "@/app/ui/dashboard/footer/page";
 import { fetchUsers } from "@/app/lib/data";
+import { deleteUser } from "@/app/lib/actions";
 
 export default async function UserPage({searchParams}) {
   const q = searchParams?.q || "";
@@ -54,9 +55,12 @@ export default async function UserPage({searchParams}) {
                       View
                     </button>
                   </Link>
-                  <button className={`${styles.buttons} ${styles.delete}`}>
-                    Delete
-                  </button>
+                  <form action={deleteUser}>
+                    <input type="hidden" name="id" value={user.id} />
+                    <button className={`${styles.buttons} ${styles.delete}`}>
+                      Delete
+                    </button>
+                  </form>
                 </div>
               </td>
             </tr>

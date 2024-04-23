@@ -2,6 +2,7 @@ import React from "react";
 import styles from "@/app/ui/dashboard/products/productPage/productPage.module.css";
 import Image from "next/image";
 import { fetchProduct } from "@/app/lib/data";
+import { updateProduct } from "@/app/lib/actions";
 
 export default async function ProductPage({ params }) {
   const { id } = params;
@@ -16,7 +17,8 @@ export default async function ProductPage({ params }) {
         {product.title}
       </div>
       <div className={styles.formContainer}>
-        <form className={styles.form}>
+        <form action={updateProduct} className={styles.form}>
+          <input type="hidden" name="id" value={product.id} />
           <label>Title</label>
           <input type="text" name="title" placeholder={`${product.title}`} />
           <label>Price</label>

@@ -1,9 +1,10 @@
 import styles from "@/app/ui/dashboard/users/addUser/addUser.module.css";
+import { addUser } from "@/app/lib/actions";
 
 export default function AddUser() {
   return (
     <div className={styles.container}>
-      <form className={styles.form}>
+      <form action={addUser} className={styles.form}>
         <input type="text" placeholder="username" name="username" required />
         <input type="email" placeholder="email" name="email" required />
         <input

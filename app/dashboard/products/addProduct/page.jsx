@@ -1,9 +1,10 @@
+import { addProduct } from "@/app/lib/actions";
 import styles from "@/app/ui/dashboard/products/addProduct/add.module.css";
 
 export default function AddProduct() {
   return (
     <div className={styles.container}> 
-        <form className={styles.form}>
+        <form action={addProduct} className={styles.form}>
             <input type="text" name="title" placeholder='title' required />
             <select name="category" id="category">
                 <option value="phone">Phone</option>

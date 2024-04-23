@@ -5,6 +5,7 @@ import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/page";
 import Footer from "@/app/ui/dashboard/footer/page";
 import { fetchProducts } from "@/app/lib/data";
+import { deleteProduct } from "@/app/lib/actions";
 
 export default async function Products({ searchParams }) {
   const q = searchParams?.q || "";
@@ -55,7 +56,7 @@ export default async function Products({ searchParams }) {
                 <span>{product.price}</span>
               </td>
               <td>
-                <span>{product.createdAt}</span>
+                <span>{product.createdAt?.toString().slice(4, 16)}</span>
               </td>
               <td>
                 <span>{product.stock}</span>
@@ -67,9 +68,12 @@ export default async function Products({ searchParams }) {
                       View
                     </button>
                   </Link>
-                  <button className={`${styles.button} ${styles.delete}`}>
-                    Delete
-                  </button>
+                  <form action={deleteProduct}>
+                    <input type="hidden" name="id" value={product.id} />
+                    <button className={`${styles.button} ${styles.delete}`}>
+                      Delete
+                    </button>
+                  </form>
                 </div>
               </td>
             </tr>
