@@ -8,7 +8,7 @@ export default function MenuLink({ key, item }) {
   return (
     <Link
       key={key}
-      href={item.path}
+      href={item && item.path}
       className={`${styles.container} ${
         pathname === item.path && styles.active
       }`}
