@@ -10,11 +10,11 @@ export default function MenuLink({ key, item }) {
       key={key}
       href={item && item.path}
       className={`${styles.container} ${
-        pathname === item.path && styles.active
+        pathname === item?.path && styles.active
       }`}
     >
-      {item.icon}
-      {item.title}
+      {item && item.icon}
+      {item && item.title}
     </Link>
   );
 }
