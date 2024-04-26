@@ -5,10 +5,12 @@ import { usePathname } from "next/navigation";
 
 export default function MenuLink({ key, item }) {
   const pathname = usePathname();
+  if (!item) return null;
+
   return (
     <Link
       key={key}
-      href={item && item.path}
+      href={item.path}
       className={`${styles.container} ${
         pathname === item?.path && styles.active
       }`}
