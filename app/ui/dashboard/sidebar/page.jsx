@@ -15,6 +15,7 @@ export default function Sidebar() {
           src="https://i.imgur.com/e8buxpa.jpeg"
           alt="avatar"
           height="50"
+          width={50}
         />
         <div className={styles.userDetail}>
           <span className={styles.userName}>Anne</span>
