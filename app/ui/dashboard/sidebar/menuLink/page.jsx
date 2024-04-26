@@ -1,10 +1,10 @@
-"use client"
-import Link from 'next/link'
-import styles from './menuLink.module.css'
-import { usePathname } from 'next/navigation'
+"use client";
+import Link from "next/link";
+import styles from "./menuLink.module.css";
+import { usePathname } from "next/navigation";
 
-export default function MenuLink({ item, key }) {
-  const pathname = usePathname()
+export default function MenuLink({ item }) {
+  const pathname = usePathname();
   return (
     <Link
       href={item.path}

@@ -8,7 +8,6 @@ import {
     MdPeople,
     MdOutlineSettings,
     MdHelpCenter,
-    MdLogout,
   } from "react-icons/md";
 
 export const ITEM_PER_PAGE = 5;

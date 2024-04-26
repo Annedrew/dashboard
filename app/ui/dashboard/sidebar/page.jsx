@@ -3,12 +3,13 @@ import { sidebarItems } from "@/app/lib/constant";
 import MenuLink from "./menuLink/page";
 import styles from "./sidebar.module.css";
 import { MdLogout } from "react-icons/md";
+import Image from "next/image";
 
 export default function Sidebar() {
   return (
     <div className={styles.container}>
       <div className={styles.user}>
-        <img
+        <Image
           className={styles.userImage}
           src="https://i.imgur.com/e8buxpa.jpeg"
           alt="avatar"

@@ -1,7 +1,7 @@
 "use client"
 import React  from 'react';
 import { chartData } from '@/app/lib/constant';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import styles from "./chart.module.css";
 
 export default function Chart() {
