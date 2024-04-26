@@ -4,7 +4,6 @@ import MenuLink from "./menuLink/page";
 import styles from "./sidebar.module.css";
 import { MdLogout } from "react-icons/md";
 import Image from "next/image";
-import { signOut } from "@/app/auth";
 
 
 export default function Sidebar() {
