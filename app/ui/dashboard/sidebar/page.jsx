@@ -27,8 +27,8 @@ export default function Sidebar() {
           return (
             <li key={item.title}>
               <span className={styles.cat}>{item.title}</span>
-              {item.list.map((list) => {
-                return <MenuLink key={list.title} item={list} />;
+              {item.list.map((item) => {
+                return <MenuLink key={item.title} item={item} />;
               })}
             </li>
           );
