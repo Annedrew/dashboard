@@ -35,10 +35,10 @@ export default function Sidebar() {
         })}
       </ul>
       <form
-        action={async () => {
-          "use server";
-          await signOut();
-        }}
+        // action={async () => {
+        //   "use server";
+        //   await signOut();
+        // }}
       >
         <button className={styles.logout}>
           <MdLogout />
