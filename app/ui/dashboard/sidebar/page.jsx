@@ -1,6 +1,6 @@
 import React from "react";
 import { sidebarItems } from "@/app/lib/constant";
-import MenuLink from "./menuLink/page";
+import MenuLink from "../menuLink/page";
 import styles from "./sidebar.module.css";
 import { MdLogout } from "react-icons/md";
 import Image from "next/image";
