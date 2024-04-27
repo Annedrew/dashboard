@@ -16,12 +16,10 @@ export default async function Products({ searchParams }) {
   console.log(`Products: ${products}`);
 
   return (
-    <div>
-      <div className={styles.container}>
-        <div className={styles.top}>
-          <SearchBar placeholder={"Search for a project..."} />
-          <button className={styles.addButton}>Add New</button>
-        </div>
+    <div className={styles.container}>
+      <div className={styles.top}>
+        <SearchBar placeholder={"Search for a project..."} />
+        <button className={styles.addButton}>Add New</button>
       </div>
       <table className={styles.table}>
         <thead>

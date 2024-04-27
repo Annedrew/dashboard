@@ -16,7 +16,7 @@ export default async function UserPage({searchParams}) {
     <div className={styles.container}>
       <div className={styles.top}>
         <SearchBar placeholder={"Search for a user..."} />
-        <button className={styles.button}>Add New</button>
+        <button className={styles.addButton}>Add New</button>
       </div>
       <table className={styles.table}>
         <thead>
@@ -51,13 +51,13 @@ export default async function UserPage({searchParams}) {
               <td>
                 <div className={styles.buttons}>
                   <Link href={`users/${user.id}`}>
-                    <button className={`${styles.buttons} ${styles.view}`}>
+                    <button className={`${styles.button} ${styles.view}`}>
                       View
                     </button>
                   </Link>
                   <form action={deleteUser}>
                     <input type="hidden" name="id" value={user.id} />
-                    <button className={`${styles.buttons} ${styles.delete}`}>
+                    <button className={`${styles.button} ${styles.delete}`}>
                       Delete
                     </button>
                   </form>

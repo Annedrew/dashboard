@@ -1,8 +1,11 @@
 :root {
     --bg: #151c2c;
-    --bgSoft: #0b3c5d;
+    --bgSoft: #182237;
     --text: white;
     --textSoft: #b7bac1;
+    /* Hover, selected and searchbar background color */
+    --hover: #2e374a;
+    --button: #4BA4A6;
 }
 
 * {

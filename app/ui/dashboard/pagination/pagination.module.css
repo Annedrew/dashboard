@@ -8,9 +8,14 @@
 .button {
     background-color: transparent;
     border: none;
-    color: var(--text) ;
+    color: var(--text);
     padding: 5px 10px;
     cursor: pointer;
+}
+
+.button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
 
 .paginationbtn {

@@ -11,15 +11,6 @@
   justify-content: space-between;
 }
 
-.addButton {
-  padding: 10px;
-  background-color: #5d57c9;
-  color: var(--text);
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 .table {
   width: 100%;
 }
@@ -52,10 +43,19 @@
   cursor: pointer;
 }
 
+.addButton {
+  padding: 10px;
+  background-color: var(--button);
+  color: var(--text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .view {
-  background-color: teal;
+  background-color: #2B547E;
 }
 
 .delete {
-  background-color: crimson;
+  background-color: #A91B0D;
 }
