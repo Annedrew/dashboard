@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/page";
 import Footer from "@/app/ui/dashboard/footer/page";
-import { fetchProducts } from "@/app/lib/data";
+import { fetchProducts } from "@/app/lib/utils";
 import { deleteProduct } from "@/app/lib/actions";
 
 export default async function Products({ searchParams }) {

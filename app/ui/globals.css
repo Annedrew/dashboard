@@ -6,6 +6,7 @@
     /* Hover, selected and searchbar background color */
     --hover: #2e374a;
     --button: #4BA4A6;
+    height: 100%;
 }
 
 * {
@@ -17,6 +18,9 @@
 body {
     background-color: var(--bg);
     color: var(--text);
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 a {

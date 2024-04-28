@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/app/ui/dashboard/products/productPage/productPage.module.css";
 import Image from "next/image";
-import { fetchProduct } from "@/app/lib/data";
+import { fetchProduct } from "@/app/lib/utils";
 import { updateProduct } from "@/app/lib/actions";
 
 export default async function ProductPage({ params }) {

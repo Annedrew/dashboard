@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "@/app/ui/dashboard/users/userProfile/userProfile.module.css";
 import Image from 'next/image';
-import { fetchUser } from "@/app/lib/data";
+import { fetchUser } from "@/app/lib/utils";
 import { updateUser } from '@/app/lib/actions';
 
 export default async function UserProfile({params}) {

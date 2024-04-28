@@ -4,7 +4,7 @@ import SearchBar from "@/app/dashboard/searchBar/page";
 import Link from "next/link";
 import Pagination from "@/app/ui/dashboard/pagination/page";
 import Footer from "@/app/ui/dashboard/footer/page";
-import { fetchUsers } from "@/app/lib/data";
+import { fetchUsers } from "@/app/lib/utils";
 import { deleteUser } from "@/app/lib/actions";
 
 export default async function UserPage({searchParams}) {

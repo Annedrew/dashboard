@@ -1,6 +1,6 @@
 "use server";
 
-import { connectToDB } from "./utils";
+import { connectToDB } from "./connect";
 import bcrypt from "bcrypt";
 import { Product, User } from "./models";
 import { revalidatePath } from "next/cache";
