@@ -1,11 +1,11 @@
 "use client";
 import styles from "@/src/css/dashboard/login/login.module.css";
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 import { useRouter } from "next/navigation";
-// import UserContext from "../login/context/userContext";
+import UserContext from "./authorization/userContext";
 
 export default function LoginPage() {
-  // const { userInfo, setUserInfo } = useContext(UserContext);
+  const { user, setUser } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
@@ -32,7 +32,7 @@ export default function LoginPage() {
       .then((response) => {
         if (response.data.ActionType === "OK") {
           const res = JSON.stringify(response.data.data.username)
-          setUserInfo(res)
+          setUser(res)
           localStorage.setItem("token", JSON.stringify(response.data[0]));
           router.push("/dashboard");
         } else {
