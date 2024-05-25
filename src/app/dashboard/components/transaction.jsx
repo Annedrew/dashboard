@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./transaction.module.css";
+import styles from "@/src/css/dashboard/components/transaction.module.css";
 import Image from "next/image";
 
 export default function Transaction() {

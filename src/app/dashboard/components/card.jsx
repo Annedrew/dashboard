@@ -1,6 +1,6 @@
 import React from "react";
 import { MdSupervisedUserCircle } from "react-icons/md";
-import styles from "./card.module.css";
+import styles from "@/src/css/dashboard/components/card.module.css";
 
 export default function Card() {
   return (

@@ -1,10 +1,9 @@
 import React from "react";
-import { sidebarItems } from "@/app/lib/constant";
-import MenuLink from "../menuLink/page";
-import styles from "./sidebar.module.css";
+import { sidebarItems } from "@/src/app/lib/constant";
+import MenuLink from "./menuLink";
+import styles from "@/src/css/dashboard/components/sidebar.module.css";
 import { MdLogout } from "react-icons/md";
 import Image from "next/image";
-
 
 export default function Sidebar() {
   return (

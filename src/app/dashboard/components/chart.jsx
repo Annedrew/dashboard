@@ -1,8 +1,8 @@
 "use client"
 import React  from 'react';
-import { chartData } from '@/app/lib/constant';
+import { chartData } from '@/src/app/lib/constant';
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import styles from "./chart.module.css";
+import styles from "@/src/css/dashboard/components/chart.module.css";
 
 export default function Chart() {
   return (

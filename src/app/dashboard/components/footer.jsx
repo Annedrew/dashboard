@@ -1,4 +1,4 @@
-import styles from "./footer.module.css";
+import styles from "@/src/css/dashboard/components/footer.module.css";
 import { MdOutlineEmail } from "react-icons/md";
 
 export default function Footer() {

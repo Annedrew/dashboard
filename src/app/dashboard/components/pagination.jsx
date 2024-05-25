@@ -1,6 +1,6 @@
 "use client"
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
-import styles from "./pagination.module.css";
+import styles from "@/src/css/dashboard/components/pagination.module.css";
 import {
   IoMdArrowDropleftCircle,
   IoMdArrowDroprightCircle,
