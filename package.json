@@ -11,6 +11,7 @@
   "dependencies": {
     "@next/eslint-plugin-next": "14.0.1",
     "aws4": "^1.12.0",
+    "axios": "^1.7.2",
     "bcrypt": "^5.1.1",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.2",
@@ -20,7 +21,8 @@
     "react-dom": "18",
     "react-icons": "^4.11.0",
     "recharts": "^2.12.5",
-    "use-debounce": "^10.0.0"
+    "use-debounce": "^10.0.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "eslint": "8",

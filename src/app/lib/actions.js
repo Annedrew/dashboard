@@ -5,13 +5,29 @@ import bcrypt from "bcrypt";
 import { Product, User } from "./models";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
+import { signIn } from "./authorization/auth";
+
+export const loginAuth = async (prevState, formData) => {
+  const { username, password } = Object.fromEntries(formData);
+
+  try {
+    await signIn("credentials", { username, password });
+  } catch (err) {
+    if (err.message.includes("CredentialsSignin")) {
+      return "Wrong Credentials";
+    }
+    throw err;
+  }
+};
 
 export const addUser = async (formData) => {
   const { username, email, password, phone, address, isAdmin, isActive } =
     Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    await connectToDB();
+
+    // hashedpassword to increasing security
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
@@ -37,7 +53,7 @@ export const addProduct = async (formData) => {
   const { title, price, stock, category, description } = Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    await connectToDB();
 
     const newProduct = new Product({
       title,
@@ -60,7 +76,7 @@ export const deleteUser = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    await connectToDB();
     await User.findByIdAndDelete(id);
   } catch (error) {
     console.log(`Failed to delete user. Error: ${error}`);
@@ -74,7 +90,7 @@ export const deleteProduct = async (formData) => {
   const { id } = Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    await connectToDB();
     await Product.findByIdAndDelete(id);
   } catch (error) {
     console.log(`Failed to delete product. Error: ${error}`);
@@ -88,7 +104,7 @@ export const updateUser = async (formData) => {
   const { id, username, email, password, phone, address, isAdmin, isActive } = Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    await connectToDB();
     const updateFields = {
       username, 
       email, 
@@ -113,7 +129,7 @@ export const updateProduct = async (formData) => {
   const { id, title, price, stock, category, description } = Object.fromEntries(formData);
 
   try {
-    connectToDB();
+    await connectToDB();
     const updateFields = {
       title, 
       price, 

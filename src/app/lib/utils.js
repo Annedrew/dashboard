@@ -2,24 +2,6 @@ import { User, Product } from "./models";
 import { connectToDB } from "./connect";
 import { ITEM_PER_PAGE } from "./constant";
 
-export const logIn = async (email, password) => {
-  try {
-    connectToDB();
-    const user = await User.findOne({
-      email: email,
-      password: password,
-    });
-
-    if (!user) {
-      throw new Error("User not found");
-    }
-
-    return user;
-  } catch (error) {
-    throw error;
-  }
-};
-
 export const fetchUsers = async (q, page) => {
   // Set case insensitive
   const regex = new RegExp(q, "i");
